@@ -18,13 +18,15 @@ List<string>mots_trouves, et trois méthodes : toString() qui retourne les
 informations de notre joueur, une méthode Add_Mots() qui ajoute le mot entré 
 par le joueur dans sa liste de mots trouvés, une méthode Add_Score() qui ajoute 
 au score du joueur la taille du mot trouvé.  
+
 La classe Dictionnaire est composé des attributs langue et d’un tableau de 
 list string. Chaque case de tableau est composé d’une liste en fonction de la taille 
 qui est remplise grâce à la méthode readFile.  On change de case de tableau avec 
 des while et dès qu’un chiffre est lu on change de case.  Pour la méthode 
 dichotomique on a choisi de remettre les elements du tableau de liste dans une 
 seule liste pour faciliter la manipulation. On va récuperer une liste réduite de 
-moitié en taille en fonction de si le mot est plus petit ou plus grand que le mo 
+moitié en taille en fonction de si le mot est plus petit ou plus grand que le mot précédent.
+
 La classe Plateau possède trois attributs : une matrice de caractères 
 char[,]plateau, un niveau de difficulté, un tableau de mots. Nous avons ensuite 
 définit le plateau en fonction de la difficulté choisie. Nous nous sommes 
@@ -34,11 +36,13 @@ Test_Plateau, nous vérifions que le mot entré par le joueur est bien dans la g
 Nous avons commencé par verifier que les lignes et colonnes entrés par le joueur 
 sont dans la grille puis nous verifions que le mot fait partie de la liste des mots à 
 trouver, enfin nous vérifions la direction donnée.  
+
 Dans la classe Program, nous avons la mise en page et l’affichage du Jeu. 
 Nous appelons la classe Jeu avec la méthode TourdeJeu qui prend en paramètre 
 un joueur, la difficulté et la langue choisie. Nous avons pris en compte le cas où 
 l’utilisateur rentre une langue non valide. Après avoir fini le tour de Jeu, le 
 programme affiche qui est le vainqueur. 
+
 Dans la classe Jeu nous créeons le plateau et le timer. Pour afficher le 
 plateau nous utilisons la méthode toString(). Pour le timer nous avons utilisé la 
 fonction TimeSpan. Puis nous demandons au joueur de rentrer le mot à 
